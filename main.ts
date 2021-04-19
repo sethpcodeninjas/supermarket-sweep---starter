@@ -2,9 +2,12 @@ namespace SpriteKind {
     export const Grocery = SpriteKind.create()
     export const CartItem = SpriteKind.create()
 }
+function addToCart(){
+    
+}
 function createAllGroceries(){
-    for (){
-        
+    for (let index = 0; index < groceryImages.length; index++){
+        createGrocery(groceryImages.get(index), groceryCosts.get(index), groceryWeights.get(index), groceryNames.get(index))
     }
 }
 function createGrocery (gImg: Image, cost: number, weight: number, name: string) {
@@ -237,3 +240,4 @@ controller.moveSprite(player)
 scene.cameraFollowSprite(player)
 // column = 0, row = 4: how do we place the sprite on column 0 row 4
 tiles.placeOnTile(player, tiles.getTileLocation(1, 3))
+createAllGroceries()
